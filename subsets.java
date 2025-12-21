@@ -20,3 +20,11 @@ class Solution {
 
     }
 }
+//method 2 -> usimg for loop
+ans.add(new ArrayList<>(helper));
+        for(int i=ind;i<nums.length;i++)
+        {
+            helper.add(nums[i]);
+            generateSubsets(nums,i+1,helper,ans);
+            helper.remove(helper.size()-1);
+        }
