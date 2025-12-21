@@ -20,7 +20,7 @@ class Solution {
 
     }
 }
-//method 2 -> usimg for loop
+//method 2 -> usimg for loop(0ms) optimized code.....
 ans.add(new ArrayList<>(helper));
         for(int i=ind;i<nums.length;i++)
         {
