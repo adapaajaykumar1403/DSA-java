@@ -16,9 +16,17 @@ class Solution {
         {
             return;
         }
+        //Method --> 1 using normal recursion
         helper.add(num);
         generateComb(k-1,n-num,num+1,helper);
         helper.remove(helper.size()-1);
         generateComb(k,n,num+1,helper);
+        //Method --> 2 using for loop
+        //  for(int i=num;i<=9;i++)
+        // {
+        //     helper.add(i);
+        //     generateComb(k-1,n-i,i+1,helper);
+        //     helper.remove(helper.size()-1);
+        // }
     }
 }
