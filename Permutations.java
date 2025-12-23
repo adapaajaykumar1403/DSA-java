@@ -37,3 +37,25 @@ class Solution {
         }
     }
 }
+
+//Method -->2 using vis boolean array
+public void generatePerm(int[] nums,int n,boolean[] vis,ArrayList<Integer> helper)
+    {
+        if(helper.size()==n)
+        {
+            ans.add(new ArrayList(helper));
+            return;
+        }
+
+        for(int i=0;i<n;i++)
+        {
+            if(vis[i]==true)
+            {
+                continue;
+            }
+            helper.add(nums[i]);
+            vis[i]=true;
+            generatePerm(nums,n,vis,helper);
+            helper.remove(helper.size()-1);
+            vis[i]=false;
+        }
